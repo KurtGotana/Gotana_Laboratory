@@ -31,22 +31,23 @@ class Person {
     }
 }
 
-class SchoolTest extends Person{
-    public SchoolTest(String name, int id) {
-        super(name, id);
-    }
+class SchoolTest{
 
     public static void main(String[] args) {
         Person person = new Person("Billy Bob", 12345);
+        System.out.println("Person Details:");
         person.displayInfo();
 
         Student student = new Student("Jane Smith", 67890, "Grade 10");
+        System.out.println("\nStudent Details:");
         student.displayInfo();
 
         Staff staff = new Staff("Kurt Gotana", 54321, "IT Department");
+        System.out.println("\nStaff Details:");
         staff.displayInfo();
 
         Teacher teacher = new Teacher("Bob Ross", 98765, "Art");
+        System.out.println("\nTeacher Details:");
         teacher.displayInfo();
     }
 }
