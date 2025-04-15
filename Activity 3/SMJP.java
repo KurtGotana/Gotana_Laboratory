@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Person {
 
     private String name;
@@ -34,11 +36,21 @@ class Person {
 class SchoolTest{
 
     public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter your name: ");
+        String studentName = input.nextLine();
+        System.out.println("Enter your id: ");
+        int studentId = input.nextInt();
+        input.nextLine();
+        System.out.println("Enter your grade: ");
+        String studentGrade = input.nextLine();
+
         Person person = new Person("Billy Bob", 12345);
         System.out.println("Person Details:");
         person.displayInfo();
 
-        Student student = new Student("Jane Smith", 67890, "Grade 10");
+        Student student = new Student(studentName, studentId, studentGrade);
         System.out.println("\nStudent Details:");
         student.displayInfo();
 
